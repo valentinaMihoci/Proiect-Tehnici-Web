@@ -1,0 +1,27 @@
+.table-container1 {
+    overflow-x: auto;
+   }
+#tab-pr_lucru {
+     border: solid 2px rgb(240, 129, 19);
+     border-radius: 15px;
+     margin-left: 20px;
+     margin-right:20px;
+     white-space: nowrap;
+   }
+   
+td.active, th.active {
+     border-collapse: separate;
+}
+   
+#tab-pr_lucru>tbody td:nth-child(odd) {
+     background-color: rgb(247, 124, 1)
+}
+#tab-pr_lucru>tbody td:nth-child(2n) {
+     background-color: rgb(151, 85, 19)
+}
+   
+#tab-pr_lucru>tbody>tr:hover .active{
+           background-color: rgb(167, 89, 12);
+}
+   
+   

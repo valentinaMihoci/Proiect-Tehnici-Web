@@ -1,0 +1,84 @@
+#grid-container > section {
+    background-color: transparent;
+    text-align: center;
+    padding: 20px 0;
+  } 
+  
+
+#grid-container{
+      display: grid;
+      grid-template-areas: "el3 el2 el2 el31"
+                           "el32 el34 el33 el35 "
+                           "el1 el1 el1 el1"
+                           ". el4 el4 ."
+                           "el5 el5 el6 el6"
+                           "el7 el7 el8 el8";
+      grid-gap: 10px;
+      padding: 10px;
+}
+  
+  
+#item1 {
+      place-self: center;
+      grid-area: el1;
+}
+  
+#item2 {
+      grid-area: el2;
+      place-self: center;
+}
+  
+#item3 {
+    grid-area: el3;
+    place-self: center;
+    
+}
+
+#item31 {
+    grid-area: el31;
+    place-self: center;
+}
+
+#item32 {
+    grid-area: el32;
+    place-self: center;
+
+}
+
+#item33 {
+    grid-area: el33;
+    place-self: center;
+
+}
+
+#item34 {
+    grid-area: el34;
+    place-self: center;
+}
+
+#item35 {
+    grid-area: el35;
+    place-self: center;
+
+}
+
+#item4 {
+      grid-area: el4;
+      place-self: center;
+}
+  
+#item5 {
+      grid-area: el5;
+}
+  
+#item6 {
+      grid-area: el6;
+}
+  
+#item7 {
+    grid-area: el7;
+}
+
+#item8 {
+    grid-area: el8;
+}
