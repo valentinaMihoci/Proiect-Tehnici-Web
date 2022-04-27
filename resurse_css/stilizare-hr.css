@@ -1,0 +1,17 @@
+#hr1,#hr2 {
+    background-color: rgb(111, 66, 20);
+    border-radius: 10px;
+    border: 2px solid rgb(111, 66, 20);;
+    overflow: visible;
+    text-align: center;
+    height: 0px;
+  }
+  
+  #hr1:after {
+      background: rgb(250, 174, 81);
+      content: '✽';
+      padding: 0 15px;
+      position: relative;
+      top: -11px;
+      
+  }

@@ -2,11 +2,16 @@ header{
     display: block;
     height: 60px;
     text-align: center;
+ 
+}
+.titlu1 {
+    font-family: 'New Tegomin', serif;
+    font-size: 3rem;
 }
 
 html{
     background-color :rgb(250, 174, 81);
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .img1{
