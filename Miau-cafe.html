@@ -7,14 +7,15 @@
 
         <title>Miau Cafe</title>
 
-        <link rel="stylesheet" text="text/css" href="resurse_css/header.css">
-        <link rel="stylesheet" text="text/css" href="resurse_css/meniu.css">
-        <link rel="stylesheet" text="text/css" href="resurse_css/tabel-program.css">
-        <link rel="stylesheet" text="text/css" href="resurse_css/tabel-meniu.css">
-        <link rel="stylesheet" text="text/css" href="resurse_css/main.css">
-        <link rel="stylesheet" text="text/css" href="resurse_css/regulament.css">
-        <link rel="stylesheet" text="text/css" href="resurse_css/stilizare-hr.css">
-        <link rel="stylesheet" text="text/css" href="resurse_css/link-top.css">
+        <link rel="stylesheet" text="text/css" href="resurse_css/header.css" />
+        <link rel="stylesheet" text="text/css" href="resurse_css/meniu.css" />
+        <link rel="stylesheet" text="text/css" href="resurse_css/tabel-program.css" />
+        <link rel="stylesheet" text="text/css" href="resurse_css/tabel-meniu.css" />
+        <link rel="stylesheet" text="text/css" href="resurse_css/main.css" />
+        <link rel="stylesheet" text="text/css" href="resurse_css/regulament.css" />
+        <link rel="stylesheet" text="text/css" href="resurse_css/stilizare-hr.css"/>
+        <link rel="stylesheet" text="text/css" href="resurse_css/link-top.css" />
+        <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet"/>
         
 </head>
 
@@ -27,8 +28,12 @@
     </header>
 
     <nav>
+        <label id="hamburger" for="ch-menu">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="menu">
+        </label>
+        <input id="ch-menu" type="checkbox">
         <ul class="meniu">
-            <li><a href="#ACASA">ACASA</span></a></li>
+            <li><a href="#ACASA"><span class="casa1">ACASA</span></a></li>
             <li><a href="#companie">Despre noi</a></li>
             <li><div><a href="#MENIU">Meniu</a></div>
                 <ul>                        
@@ -52,7 +57,7 @@
                 <h2><a id="companie"></a>Despre noi</h2>
                 <p>  <b> Miau Cafe</b> este casa pisicilor deschisa tuturor oamenilor dornici sa le cunoasca, sa le iubeasca si poate sa le adopte. Va asteptam cu drag in cafeneaua noastra. </p>
                 <div class="reguli">
-                    <h3><span>Regulament</span></h3>
+                    <span><h2>Regulament</h2></span>
                     <p> Bunăstarea felinelor noastre este pe primul loc, așa că vă rugăm sa le respectați când veniți în vizită :) Avem câteva reguli de bună purtare cu ele și va rugăm să țineți cont de ele: </p>
                     <ul>
                         <li>Atunci când o pisică doarme, nu o treziți, lasați-o să-și facă somnul de frumusețe :)</li>
@@ -70,7 +75,7 @@
 
         <section id="item2">
             <section id="program_lucru">
-                <h2>Program </h2>
+                <h2>PROGRAM </h2>
                 <div class="table-container1">
                 <table id="tab-pr_lucru">
                     <thead>
@@ -141,7 +146,9 @@
     
         <section id="item4">
             <section class="meniu1">
-                <h2><a id="MENIU"></a>Meniu</h2>
+                <a id="MENIU"></a>
+                <br><br>
+                <h2>Meniu</h2>
                 <div class="table-container2">
                     <table id="tb-meniu">
                         <tbody>
@@ -182,10 +189,12 @@
 
         <section id="item5">
             <section class="meniu1">
+                <a id="CAFEA"></a>
+                <br><br>
                 <div class="table-container2">
                     <table id="tb-meniu">
                         <caption>
-                            <a id="CAFEA"></a><h4>Cafea</h4>
+                            <h3>Cafea</h3>
                         </caption>
                         <tbody>
                             <tr >
@@ -228,10 +237,12 @@
 
         <section id="item6">
             <section class="meniu1">
+                <a id="FRESH"></a>
+                <br><br>
                 <div class="table-container2">
                     <table id="tb-meniu">
                         <caption>
-                            <a id="FRESH"></a><h4>Fresh</h4>
+                            <h3>Fresh</h3>
                         </caption>
                         <tbody>
                             <tr >
@@ -270,10 +281,12 @@
 
         <section id="item7">
             <section class="meniu1">
+                <a id="SMOOTHIES"></a>
+                <br><br>
                 <div class="table-container2">
                     <table id="tb-meniu">
                         <caption>
-                            <a id="SMOOTHIES"></a><h4>Smoothies</h4>
+                            <h3>Smoothies</h3>
                         </caption>
                         <tbody>
                             <tr >
@@ -312,10 +325,12 @@
 
         <section id="item8">
             <section class="meniu1">
+                <a id="CEAI"></a>
+                <br><br>
                 <div class="table-container2">
                     <table id="tb-meniu">
                         <caption>
-                            <a id="CEAI"></a><h4>Ceaiuri</h4>
+                           <h3>Ceaiuri</h3>
                         </caption>
                         <tbody>
                             <tr >
@@ -379,13 +394,13 @@
            </details>
        
 
-       <p>Contact:</p>
-       <address>
-       Numar telefon: <a href="tel:0723 379 551">0723 379 551</a>.<br> 
-       Email: <a href="mailto:miau@miaucafe.ro">miau@miaucafe.ro</a>.<br> 
-       </address>
+           <p>Contact:</p>
+           <address>
+           Numar telefon: <a href="tel:0723 379 551">0723 379 551</a>.<br> 
+           Email: <a href="mailto:miau@miaucafe.ro">miau@miaucafe.ro</a>.<br> 
+           </address>
 
-       </section>
+        </section>
 
        <hr id = "hr2">
 

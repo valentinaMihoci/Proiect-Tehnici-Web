@@ -7,11 +7,11 @@
     height: 0px;
   }
   
-  #hr1:after {
+#hr1:after {
       background: rgb(250, 174, 81);
       content: '✽';
       padding: 0 15px;
       position: relative;
       top: -11px;
       
-  }
+}

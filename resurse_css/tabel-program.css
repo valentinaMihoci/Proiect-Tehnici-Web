@@ -21,7 +21,7 @@ td.active, th.active {
 }
    
 #tab-pr_lucru>tbody>tr:hover .active{
-           background-color: rgb(167, 89, 12);
+     background-color: rgb(249, 223, 139);
 }
    
    

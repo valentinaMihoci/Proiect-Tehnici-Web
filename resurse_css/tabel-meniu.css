@@ -10,7 +10,7 @@
 }    
 
 #tb-meniu>tbody>tr{
-    border: solid 2px rgba(72, 52, 13, 0.86);
+    border-bottom: solid 2px rgba(72, 52, 13, 0.86);
 }
 
 .prim{
@@ -21,4 +21,7 @@
 .second{
     width: 20%;
     text-align: right;
+}
+#item4>.meniu1>h2, h3 {
+    border-bottom: double rgba(72, 52, 13, 0.86);
 }

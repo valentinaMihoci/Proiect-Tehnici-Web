@@ -1,12 +1,12 @@
 header{
     display: block;
-    height: 60px;
+    height: 6rem;
     text-align: center;
- 
 }
+
 .titlu1 {
     font-family: 'New Tegomin', serif;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 html{
