@@ -14,14 +14,16 @@ td.active, th.active {
 }
    
 #tab-pr_lucru>tbody td:nth-child(odd) {
-     background-color: rgb(247, 124, 1)
+     background-color: rgb(247, 124, 1);
+     transition: background-color 3s;
 }
 #tab-pr_lucru>tbody td:nth-child(2n) {
-     background-color: rgb(151, 85, 19)
+     background-color: rgb(151, 85, 19);
+     transition: background-color 3s;
 }
    
 #tab-pr_lucru>tbody>tr:hover .active{
-     background-color: rgb(249, 223, 139);
+     background-color: rgba(248, 86, 86, 0.9);
 }
    
    
