@@ -28,7 +28,7 @@ nav{
 
 nav ul.meniu>li{
     float:left;
-    width:90px;
+    width:15%;
 	position:relative;
 }
 
@@ -112,3 +112,8 @@ nav ul.meniu>li:hover>ul{
 }
 
 
+@media (max-width:900px){
+    nav ul.meniu li{
+        font-size:small;
+    }
+}

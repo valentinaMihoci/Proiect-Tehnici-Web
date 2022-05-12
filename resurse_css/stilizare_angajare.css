@@ -1,0 +1,37 @@
+.sec1{
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: large;
+}    
+
+#btn1{
+    text-align: center;
+}
+
+.buton1{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+    display: inline-block;
+    text-align: center;
+    padding: 4px 15px;
+    background: #652503;
+    text-shadow: 1px 1px 1px #333;
+    box-shadow: 1px 1px 3px #666;
+    color: #fff;
+    border: 0;
+
+}
+
+#formular1{
+    display:none;
+    border: double 6px rgb(106, 57, 19);
+    font-size: large;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-left:3%;
+ }  

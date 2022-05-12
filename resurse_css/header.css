@@ -11,25 +11,6 @@ header{
 
 html{
     background :rgb(250, 174, 81);
-    font-size: 1em;
+    font-size: medium;
 }
 
-section img{
-    position: relative;
-    width: 200px;
-    height: 150px;
-    border-color:rgb(77, 47, 10);
-    border-style: solid;
-    border-width: 4px;
-    transition: width 3s, height 3s;
-}
-
-section img:active{
-    width: 400px;
-    height:300px;
-}
-
-iframe{
-    width: 50%;
-    height: 400px; 
-}
