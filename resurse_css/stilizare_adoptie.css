@@ -11,43 +11,50 @@ h1{
         font-size:large;
 }
 
-/*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family:'New Tegomin';
-}*/
-
 .galerie{
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family:'New Tegomin';
     display: flex;
-    justify-content: center;
+    flex-direction:column;
     min-height: 100%;
-    width: 100%;
+    width: 80%;
+    margin-left:10%;
+    margin-right:10%;
     align-items: center;
-    background-color:rgb(224, 123, 22);
+    background-color:rgb(223, 139, 55);
 }
 
 .heading{
-    color:rgb(94, 60, 3);
+    color:rgb(0, 0, 0);
     text-align: center;
-    font-size: 2em;
-    margin: 2em 0;
+    font-size: 3em;
 }
 
 .images{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 1em;
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 1em; 
     margin: 0 1em;
+}
+
+.images p{
+    opacity:0;
+    display:none;
+}
+
+.images div{
+   width: 70%;
+   height: 80%;
+   place-self: center;
 }
 
 .images img{
     width: 100%;
+    height: 100%;
     cursor: pointer;
+    place-self: center;
     transition: 0.3s all ease;
     border-color:rgb(77, 47, 10);
     border-style: solid;
@@ -64,9 +71,9 @@ h1{
     width:100vw;
     top:0;
     left:0;
-    background-color:rgba(0,0,0,0.7);
+    background-color:rgba(0,0,0,0.9);
     color: #fff;
-    z-index: 1;
+    z-index: 2;
     overflow: auto;
     opacity:0;
     pointer-events: none;
@@ -74,6 +81,7 @@ h1{
 
 .modalContent{
     min-height:100vh;
+    font-weight: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,9 +89,13 @@ h1{
 }
 
 .modalImg{
-    width:80%;
+    width:30%;
     max-width:700px;
-    
+    height:30%;
+    max-height:500px;
+    border-color:rgb(31, 15, 211);
+    border-style: double;
+    border-width: 4px;
 }
 
 @keyframes zoom{
@@ -96,7 +108,13 @@ h1{
 }
 
 .modalTxt{
-    margin-top: 1em;
+    margin-top: 3em;
+}
+.modalTxt2{
+    margin-top: 2em;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
 }
 
 .close{
@@ -105,6 +123,9 @@ h1{
     right: 1.5em;
     font-size: 1.5em;
     cursor: pointer;
+    z-index: 3;
+    font-family:'New Tegomin';
+    font-size: 40px;
 }
 
 .modal.appear{
@@ -113,6 +134,7 @@ h1{
 }
 
 .modal.appear .modalImg,
-.modal.appear .modalTxt{
+.modal.appear .modalTxt,
+.modal.appear .modalTxt2{
     animation: zoom 0.3s linear;
 }

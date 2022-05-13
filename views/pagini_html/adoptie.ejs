@@ -8,13 +8,13 @@
     
     <%- include("../fragmente/head") %>
     <link rel="stylesheet" text="text/css" href="resurse_css/stilizare_adoptie.css"/>
-    <script href="resurse_js/adoptie.js"></script>
+    <script src="resurse_js/adoptie.js"></script> 
 
 </head>
 <body>
     <%- include("../fragmente/header") %>
     <h1> 
-        <i class="titlu1">ADOPTIE</i>
+        <i class="titlu1" id="adoptie">ADOPTIE</i>
     </h1> 
     
     <section class="adoptie">
@@ -61,27 +61,92 @@
     </section>
 
     <br>
-    <section class="galerie">
+    <section class="galerie" id="galerie">
         <div class="heading">Galerie</div>
         <div class="images">
-            <img src="resurse_poze/pisici_cafenea/img1.jpg" alt="Pisica" />
-            <img src="resurse_poze/pisici_cafenea/img2.jpg" alt="Pisica" />
-            <img src="resurse_poze/pisici_cafenea/img4.jpg" alt="Pisica" />
-            <img src="resurse_poze/pisici_cafenea/img5.jpg" alt="Pisica" />
-            <img src="resurse_poze/pisici_cafenea/img6.jpg" alt="Pisica" />
-            <img src="resurse_poze/pisici_cafenea/img7.jpg" alt="Pisica" />
-            <img src="resurse_poze/pisici_cafenea/img8.jpg" alt="Pisica" />
-            <img src="resurse_poze/pisici_cafenea/img9.jpg" alt="Pisica" />
-            <img src="resurse_poze/pisici_cafenea/img10.jpg" alt="Pisica" />
+            <div class="aaaa">
+                <img class="im" src="resurse_poze/pisici_cafenea/img1.jpg" alt="Felix si Mia" 
+                     descriere="Descriere: Felix si Mia sunt doi puiuti de 3 luni care incanta pe oricine ii vede. 
+                     Ei se iubesc foarte mult deoarece sunt frati."/>
+                <p class="ascuns">Descriere: Felix si Mia sunt doi puiuti de 3 luni care incanta pe oricine ii vede. 
+                     Ei se iubesc foarte mult deoarece sunt frati.
+                </p>  
+            </div>
+
+            <div class="aaaa">
+                <img class="im" src="resurse_poze/pisici_cafenea/img2.jpg" alt="Tomy si Niki" />
+                <p class="ascuns">Descriere: Tom si Niki doar ce au 3 saptamani de la nastere. Mama lor din pacate a murit
+                    iar acum perosnalul Miau Cafe trebuie sa aiba grija de cei 2 puiuti orfani :((
+               </p> 
+            </div>
+
+            <div class="aaaa">
+                <img class="im" src="resurse_poze/pisici_cafenea/img4.jpg" alt="Pufa" />
+                <p class="ascuns">Descriere: Pufa este o gratioasa pisica elba, ce ii place sa fie rasfatata.
+               </p> 
+            </div>
+
+            <div class="aaaa">
+                <img class="im" src="resurse_poze/pisici_cafenea/img6.jpg" alt="Motanel" />
+                <p class="ascuns">Descriere: Motanel are un an si jumatate de cand este in grija noastra, si este cel
+                    mai jucaus dintre toti.
+               </p> 
+            </div>
+
+            <div class="aaaa">
+                <img class="im" src="resurse_poze/pisici_cafenea/img8.jpg" alt="Tom & Jerry" />
+                <p class="ascuns">Descriere: Tom este o pisica mai deosebita. El vine la pachet cu Jerry, un soricel
+                    alaturi de care impreuna asigura distractia din cafenea. 
+               </p> 
+            </div>
+
+            <div class="aaaa">
+                <img class="im" src="resurse_poze/pisici_cafenea/img7.jpg" alt="Sissy" />
+                <p class="ascuns">Descriere: Sissy este cea mai lipicioasa de clientii nostri, mereu vrea sa fie mangaiata.
+               </p> 
+            </div>
+
+            <div class="aaaa">
+                <img class="im" src="resurse_poze/pisici_cafenea/img5.jpg" alt="Mimi si Kitty" />
+                <p class="ascuns">Descriere: Mimi si Kitty sunt mama si fiica, Kitty avand doar 2 saptamani. Mimi isi 
+                    protezeaja mereu fiica, si face urat daca clientii nu sunt atenti cu Kitty.
+                </p> 
+            </div>
+
+            <div class="aaaa">
+                <img class="im" src="resurse_poze/pisici_cafenea/img9.jpg" alt="Arthur" />
+                <p class="ascuns">Descriere: Artur este singuraticul din casa miau cafe, insa doar Kitty il face uneori sa 
+                    lase deoparte atitudinea singuratica.
+                </p> 
+            </div>
+
+            <div class="aaaa">
+                <img class="im" src="resurse_poze/pisici_cafenea/img10.jpg" alt="Candy" />
+                <p class="ascuns">Descriere: Candy este pisica care sta la mangaiat doar cand vrea ea, si in rest zici
+                    ca nici nu te cunoaste.
+                </p> 
+            </div>  
         </div>
         <div class="modal">
-            <span class="close"><i class="fas fa-time"></i></span>
+            <span class="close"><b>X</b></span>
             <div class="modalContent">
                 <img src="" class="modalImg" />
                 <span class="modalTxt"></span>
+                <div class="modalTxt2"></div>
             </div>
         </div>
     </section>
 
+
+    <footer>
+        <hr id = "hr2">
+
+    <div id = "drepturi_autor"><small>acest site este protejat de drepturi de autor &copy;</small>
+    <br><small>Creat la data de <time datetime="2022-04-17 20:00">17.04.2022</time>.</small></div>
+    
+    <button id="myBtn"><a href="#top" title="Mergi sus" style="color: rgb(120, 62, 3)">&#5123</a></button>
+    
+ </footer>
+    </footer>
 </body>
 </html>

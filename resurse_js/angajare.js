@@ -10,19 +10,27 @@ function init(){
     })
 
 
-    let inp = [document.getElementById("inp1"),document.getElementById("inp2"),document.getElementById("inp3"),
-               document.getElementById("inp4"),document.getElementById("inp5"),document.getElementById("inp6"),
-               document.getElementById("inp7")];
+    let inputuri = document.querySelectorAll('input.inp');
+    window.alert(`${inputuri.length}`);
+
+    inputuri.forEach((input) => {
+        const copie = input;
+        input.addEventListener("keydown", (input)=>
+           { input.style.backgroundColor = "green";}
+        );
+        input.addEventListener("keyup",keyupFunction(copie));
+    });
+    
     
 }
 
 
-function keydownFunction(elem) {
-    elem.style.backgroundColor = "green";
+function keydownFunction(element) {
+    element.style.backgroundColor = "green";
 }
   
-function keyupFunction(elem) {
-    elem.style.backgroundColor= "red";
+function keyupFunction(element) {
+    element.style.backgroundColor= "red";
 }
 
 window.onload=init;
