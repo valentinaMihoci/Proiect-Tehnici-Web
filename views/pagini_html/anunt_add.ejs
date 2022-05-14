@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="ro">
+
+<head>
+    <meta name="description" content="Suntem o cafenea mai speciala, care gazduieste si pisici. Va oferim o relaxare completa alaturi de pisicile noastre.">
+	<meta name="keywords" content=" cafeanea, relaxare, pisici, adoptie, angajare">
+
+    <title>Adauga anunt adoptie </title>  
+    <%- include("../fragmente/head") %>  
+        
+</head>
+
+<body>
+	<%- include("../fragmente/header") %> 
+	<main>
+        <form method="post" enctype="multipart/form-data">
+            <h1> <a id="anunturi">Adauga anunt</a></h1>
+            <input type="text" name="title" placeholder="Titlu..." required>
+            <textarea placeholder="Detalii.." name="detalii"></textarea>
+            <input type="file" name="img" required>
+            <input type="submit">
+        </form>
+	</main>
+
+	<%- include("../fragmente/footer") %> 
+</body>
+</html>

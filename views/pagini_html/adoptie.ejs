@@ -148,6 +148,14 @@
 
     </section>
 
+    <section class="anunturi_adoptie">
+        <a href="/anunt_add">Adauga anunt</a>
+        <div class="post_list">
+            <% anunturi.forEach(function(anunt){ %>
+                <%- include('../fragmente/anunt', {anunt:anunt}); %>
+            <% }); %>
+        </div>
+    </section>
      
 
     <footer>
