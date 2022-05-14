@@ -20,5 +20,11 @@ app.get('/adoptie',(req,res)=>{
     res.render('pagini_html/adoptie');
 })
 
+
+app.use(function(req,res){
+
+    res.redirect("404.html");
+});
+
 app.listen(2402);
 console.log('Aplicatia se va deschide pe portul 2402.');

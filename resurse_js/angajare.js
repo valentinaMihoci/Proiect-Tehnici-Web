@@ -1,36 +1,28 @@
 function init(){
-    window.alert("mergeeede!")
-    
     let button = document.getElementById("btn1");
     button.addEventListener('click', () => {
-         window.alert("merge!")
          document.getElementById("formular1").style.display = "inline-block";
          button.style.display = "none";
-
     })
 
+    let buton = document.getElementById("buton");
+    buton.onclick = function(){
 
-    let inputuri = document.querySelectorAll('input.inp');
-    window.alert(`${inputuri.length}`);
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        var validRegex1 = /^[07]+\d{8}$/;
 
-    inputuri.forEach((input) => {
-        const copie = input;
-        input.addEventListener("keydown", (input)=>
-           { input.style.backgroundColor = "green";}
-        );
-        input.addEventListener("keyup",keyupFunction(copie));
-    });
-    
-    
+        let e = document.querrySelector("#formular1 input:nth=of-child(5)");
+        let t = document.querySelector("#formular1 input:nth-of-child(6)");
+
+        if( e.value != e.value.match(validRegex) ){
+            e.value = "";
+            alert("merge!");
+        }
+
+        if( t.value != t.value.match(validRegex1) ){
+            t.value = "";
+        }
+    }
 }
 
-
-function keydownFunction(element) {
-    element.style.backgroundColor = "green";
-}
-  
-function keyupFunction(element) {
-    element.style.backgroundColor= "red";
-}
-
-window.onload=init;
+window.onload = init;
