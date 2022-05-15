@@ -170,3 +170,41 @@ h1{
     animation: zoom 0.3s linear;
 }
 
+.post_list{
+    display: flex;
+    flex-flow: row wrap;
+    width:100%;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: space-around;
+}
+
+
+.home_anunt{
+    margin-left: 5px;
+    margin-right:5px;
+    background-color: bisque;
+    border-style:double;
+    border-color:rgb(77, 47, 10);
+}
+
+.anunt{
+    flex: 1 0 auto;
+    margin: 1em;
+    text-align: center;
+    background-color:rgb(127, 227, 255);
+ 
+}
+
+img{
+    width:70%;
+    height:200px;
+    border-color: rgb(239, 12, 12);
+    border-style: solid;
+    border-width: 4px;
+}
+
+.anunt1{
+    list-style-type: none;
+}
+

@@ -7,7 +7,9 @@
 	<meta name="keywords" content=" cafeanea, relaxare, pisici, adoptie, angajare">
 
     <title>Adauga anunt adoptie </title>  
+    <link rel="stylesheet" text="text/css" href="resurse_css/anunt_add.css"/>
     <%- include("../fragmente/head") %>  
+    
         
 </head>
 
@@ -15,10 +17,12 @@
 	<%- include("../fragmente/header") %> 
 	<main>
         <form method="post" enctype="multipart/form-data">
-            <h1> <a id="anunturi">Adauga anunt</a></h1>
-            <input type="text" name="title" placeholder="Titlu..." required>
-            <textarea placeholder="Detalii.." name="detalii"></textarea>
-            <input type="file" name="img" required>
+            <h2>Adauga anunt</h2>
+            <p><label>Titlu anunt:</label><input type="text" name="title" placeholder="title" required></p>
+            <p><label>Descriere anunt:</label><textarea name="description"></textarea></p>
+            <!--<p><label>Telefon:</label><input type="text" name="title" placeholder="Nr. telefon" required></p>-->
+            <p><label>Alege poza</label><input type="file" name="img" required></p>
+            <br>
             <input type="submit">
         </form>
 	</main>

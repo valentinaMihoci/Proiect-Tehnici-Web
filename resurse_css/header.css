@@ -14,3 +14,35 @@ html{
     font-size: medium;
 }
 
+#chestie_plimbareata{
+    position: absolute;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    border-style: none;
+}
+
+#chestie_rotitoare{
+    position: absolute;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-style: none;
+    animation-name: rotire;
+    animation-iteration-count:infinite;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    animation-play-state: paused;
+    animation-timing-function:linear;
+}
+
+
+#chestie_rotitoare:hover {
+	animation-play-state: running;
+}
+
+@keyframes rotire{
+	100%{
+    	transform:rotate(360deg);
+    }
+}

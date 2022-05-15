@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta name="description" content="Suntem o cafenea mai speciala, care gazduieste si pisici. Va oferim o relaxare completa alaturi de pisicile noastre.">
+	<meta name="keywords" content=" cafeanea, relaxare, pisici, adoptie, angajare">
+
+    <title>Login </title>  
+    <link rel="stylesheet" text="text/css" href="resurse_css/login.css"/>
+    <%- include("../fragmente/head") %>  
+</head>
+
+<body>
+    <%- include("../fragmente/header") %> 
+
+    <main>
+            <p><b><%= mesaj %></b></p>
+
+            <form id="testform" method="post" action="/login_post">
+
+            <p> <label>Username:</label> <input type="text" name="username"> </p>
+            <p> <label>Parola:</label><input type="password" name="parola"></p>
+            <p><button type="submit" id="buton">Login </button> </p>
+            </form>
+    </main>
+
+    <%- include("../fragmente/footer") %> 
+</body>
+</html>

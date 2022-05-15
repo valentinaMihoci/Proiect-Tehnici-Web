@@ -8,7 +8,8 @@
     
     <%- include("../fragmente/head") %>
     <link rel="stylesheet" text="text/css" href="resurse_css/stilizare_adoptie.css"/>
-    <script src="resurse_js/adoptie.js"></script> 
+    <script src="resurse_js/adoptie.js"></script>
+    <script src="resurse_js/setInterval.js"></script> 
 
 </head>
 <body>
@@ -148,12 +149,15 @@
 
     </section>
 
-    <section class="anunturi_adoptie">
-        <a href="/anunt_add">Adauga anunt</a>
+    <hr id="hr1">
+
+    <section id="anunturi_adoptie">
+        <h1>Anunturi adoptie</h1>
+        <a href="/login">Adauga anunt</a>
         <div class="post_list">
-            <% anunturi.forEach(function(anunt){ %>
-                <%- include('../fragmente/anunt', {anunt:anunt}); %>
-            <% }); %>
+           <% anunturi.forEach(function(anunt){ %>
+            <%- include('../fragmente/anunt', {anunt:anunt}); %>
+        <% }); %>
         </div>
     </section>
      

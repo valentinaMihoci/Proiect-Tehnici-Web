@@ -13,19 +13,20 @@ function init(){
                 image.addEventListener("click", () => {
                     modalImg.src = image.src;
                     modalTxt.innerHTML = image.alt;
-                    const continut = document.querySelector("p.ascuns").textContent;
-                    modalTxt2.innerHTML = `${continut}`;
+                    modalTxt2.innerHTML = `${descriere[index].textContent}`;
                     modal.classList.add("appear");
 
+                    alert(`${index}`);
                     let imageIndex = index;
-                    let next = index++;
-                    let prev = index--;
+                    let next = index+1;
+                    let prev = index-1
 
+                    alert(`${prev}`);
                     window.addEventListener("keyup",(elem)=>{
                       if(next >= images.length){
                         next = 0;
                       } else if (prev<0){
-                        prev = images.length -1;
+                        prev = images.length-1;
                       }
 
                       if(elem.keyCode === 37){
@@ -49,7 +50,7 @@ function init(){
                       } else if (elem.keyCode === 27){
                         modal.classList.remove("appear");
                       }
-                    })
+                    });
 
                     prevBtn.addEventListener("click",()=>{
                       
@@ -59,7 +60,7 @@ function init(){
                       modalTxt2.innerHTML = `${continut}`;
                       prev--;
                       next=prev+2;
-                    })
+                    });
 
 
                     nextBtn.addEventListener("click",()=>{
@@ -70,7 +71,7 @@ function init(){
                         next++;
                         prev=next-2;
 
-                    })
+                    });
 
                     close.addEventListener("click", () => {
                       modal.classList.remove("appear");
