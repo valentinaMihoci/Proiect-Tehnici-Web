@@ -15,6 +15,9 @@
       padding: 0;
       list-style-type: none;
 }
+#chestie_plimbareata,#chestie_rotitoare{
+    display: none;
+}
 
 #grid-container > section:nth-child(1){order: 8 ;}
 #grid-container > section:nth-child(2){order: 4 ; width: 37%;}
