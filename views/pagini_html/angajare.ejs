@@ -9,7 +9,7 @@
 
     <%- include("../fragmente/head") %>
     <script src="resurse_js/angajare.js"></script>
-    <script src="resurse_js/setInterval.js"></script>
+  <!----  <script src="resurse_js/setTimeout.js"></script> -->
 </head>
 <body>
     <%- include("../fragmente/header") %>
@@ -46,14 +46,14 @@
         <div id="btn1"><button class="buton1">Formular angajare</button></div>
         <br>
         <div id="formular1">
-               <form class="formular_angajare" onsubmit="return init()">
+        <form class="formular_angajare">
                    <h2>Formular angajare</h2>
                 <p>Daca vrei sa vii in echipa noastra completeaza  formularul:</p>   
                 <p><label>Nume: </label><input class="inp" type="text" name="nume" placeholder="Nume..."/> </p>
                 <p><label>Prenume: </label><input class="inp" type="text" name="prenume" placeholder="Prenume..."/> </p>
-                <p><label>Data nasterii: </label><input class="inp" type="date" value="2022-05-18" /> </p>
+                <p><label>Data nasterii: </label><input class="inp" type="date" name="data"value="2022-05-18" /> </p>
                 <p><label>Adresa email: </label><input class="inp" type="email" placeholder="Email..." name="email" required/> </p>
-                <p><label>Telefon: </label><input class="inp" type="text" name="telefon" placeholder="Nr telefon ..."/>  </p>
+                <p id="telefon"><label>Telefon: </label><input class="inp" type="text" name="telefon" placeholder="Nr telefon ..."/>  </p>
                 <p><label>Preferinta post: </label><input class="inp" type="text" name="preferinta" placeholder="full/part-time..." /> </p>
                 <p><label>Incarca CV: </label><input class="inp" type="file"/> </p>
                 <p><input type="submit" value="Trimite formular" id="buton"/> </p>

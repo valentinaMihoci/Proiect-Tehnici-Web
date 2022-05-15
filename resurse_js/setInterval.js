@@ -17,6 +17,7 @@ window.onload=function(){
 				},40);
 		}
 	}
+
 	
 }
 
@@ -44,3 +45,4 @@ function plimba(ob){
 	
 	
 }
+
