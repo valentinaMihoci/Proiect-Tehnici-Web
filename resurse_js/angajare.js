@@ -89,7 +89,7 @@ function handleClick(event) {
 }
 
 function handleSubmit(event){
-    event.preventDefault();
+   
     document.getElementById("formular1").style.display = "inline-block";
     const nume = document.querySelector('[name="nume"]');
     const prenume = document.querySelector('[name="prenume"]');
@@ -107,6 +107,7 @@ function handleSubmit(event){
         nume.value = "";
         nume.focus();
         nume.style.backgroundColor = 'rgba(255, 109, 69, 0.919)';
+        event.preventDefault();
     }
 
     if(validateNume(prenume.value) === null ){
@@ -114,6 +115,7 @@ function handleSubmit(event){
         prenume.value = "";
         prenume.focus();
         prenume.style.backgroundColor = 'rgba(255, 109, 69, 0.919)';
+        event.preventDefault();
     } else{
         prenume.style.backgroundColor = 'rgba(70, 238, 70, 0.744)';
         prenume.value = prenume.value + "";
@@ -121,6 +123,7 @@ function handleSubmit(event){
     
     if(validateData(data_nastere) === false){
         alert("Nu ai 18 ani?  Te rugam sa verifici data cu atentie. Multumim!");
+        event.preventDefault();
     }  
 
     if(validateEmail(email.value)){
@@ -130,6 +133,7 @@ function handleSubmit(event){
         alert("Email nevalid! Introdu-l din nou. Multumim!");
         email.value = "";
         email.style.backgroundColor = 'rgba(255, 109, 69, 0.919)';
+        event.preventDefault();
     }
     
 
@@ -140,8 +144,10 @@ function handleSubmit(event){
         alert("Numarul de telefon trebuie sa inceapa cu \"07\" asa ca te rugam sa il introduci din nou. Multumim!");
         telefon.value = "";
         telefon.style.backgroundColor = 'rgba(255, 109, 69, 0.919)';
+        event.preventDefault();
     }
     
+    document.getElementById('buton').onclick=function(){window.location="/formular_completat"};
 }
 
 const validateNume = (num) => {

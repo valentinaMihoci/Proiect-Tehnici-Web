@@ -5,15 +5,19 @@ const formidableMiddleware = require('./middlewares/formidableMiddleware');
 const app = express();
 const formidable=require('formidable');
 const dataDir = path.join(__dirname,"data");
+const dataDir2 = path.join(__dirname,"date_formular_ang");
+const cvDir = path.join(__dirname,"date_formular_ang/documente");
 const imagineDir = path.join(__dirname, "resurse_poze/public/imagini");
 const session = require('express-session');
 const crypto = require('crypto');
+const req = require('express/lib/request');
 
 app.set("view engine","ejs");
 
 app.use('/resurse_css', express.static('resurse_css'));
 app.use('/resurse_poze', express.static('resurse_poze'));
 app.use('/resurse_js',express.static('resurse_js'));
+app.use('/date_formular_ang',express.static('date_formular_ang'));
 // am setat cele foldere static pentru a putea cauta prin ele 
 app.use(session({
     secret: 'abcdefg', // folosit pentru criptarea session ID-ului
@@ -42,6 +46,44 @@ app.get('/adoptie',(req,res)=>{
 app.get('/anunt_add',(req,res)=>{
     res.render('pagini_html/anunt_add');
 });
+
+app.get('/formular_completat',(req,res)=>{
+    const info = fs.readdirSync(dataDir2);
+    const informatii = info.map( filename =>{
+        const inf = fs.readFileSync(path.join(dataDir2, filename));
+        return JSON.parse(inf);
+    });
+    let n = informatii.length;
+    console.log(informatii[n-1]);
+    res.render('pagini_html/formular_completat',{'name': "Valentina", 'prename':'Mihoci'});
+ });
+
+app.get('/formular',(req,res)=>{
+    res.render('pagini_html/formular');
+})
+
+app.post('/formular',formidableMiddleware(),(req,res)=>{
+   const cv = req.files.incarcat;
+   const id = Date.now();
+   const cvExtensie = cv.originalFilename.split(".").at(-1);
+   const fileData2 = fs.readFileSync(cv.filepath);
+   fs.writeFileSync(path.join(cvDir,`${id}.${cvExtensie}`),fileData2);
+   const informatii = {
+                 id,
+                 nume: req.body.nume,
+                 prenume: req.body.prenume,
+                 data: req.body.data,
+                 email: req.body.email,
+                 telefon: req.body.telefon,
+                 pref: req.body.preferinta,
+                 cv: `date_formular_ang/documente/${id}.${cvExtensie}`
+   }
+   fs.writeFileSync(path.join(dataDir2,`${id}.json`),JSON.stringify(informatii));
+   console.log(req.body.prenume);
+   res.redirect('/formular_completat');
+});
+
+
 
 app.post('/anunt_add',formidableMiddleware(),(req,res)=>{
     const imagine = req.files.img;
