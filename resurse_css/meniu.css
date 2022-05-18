@@ -21,8 +21,6 @@ nav{
 
 @keyframes colorare-meniu {
     0%   {background: rgb(231, 145, 15);}
-    25%  {background: orange;}
-    50%  {background: orangered;}
     100% {background: rgb(255, 127, 47);}
 }
 
@@ -96,15 +94,6 @@ nav ul.meniu>li:hover>ul{
     0%{
         opacity:0;
     } 
-    25%{
-        opacity:0.25;
-    }
-    50%{
-        opacity:0.5;
-    }
-    75%{
-        opacity:0.75;
-    }
 	100%{
     	opacity:0.99;
     }

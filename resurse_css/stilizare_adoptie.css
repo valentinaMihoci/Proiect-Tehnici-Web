@@ -129,6 +129,7 @@ h1{
     color:#fff;
   
 }
+
 @keyframes zoom{
     from{
         transform:scale(0);
