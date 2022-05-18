@@ -19,6 +19,7 @@ app.use('/resurse_poze', express.static('resurse_poze'));
 app.use('/resurse_js',express.static('resurse_js'));
 app.use('/date_formular_ang',express.static('date_formular_ang'));
 // am setat cele foldere static pentru a putea cauta prin ele 
+
 app.use(session({
     secret: 'abcdefg', // folosit pentru criptarea session ID-ului
     resave: true, //sa nu stearga sesiunile idle
@@ -47,16 +48,44 @@ app.get('/anunt_add',(req,res)=>{
     res.render('pagini_html/anunt_add');
 });
 
+app.post('/anunt_add',formidableMiddleware(),(req,res)=>{
+    const imagine = req.files.img;
+    const id = Date.now();
+    const imagineEXT = imagine.originalFilename.split(".").at(-1);
+    const fileData = fs.readFileSync(imagine.filepath);
+    fs.writeFileSync(path.join(imagineDir,`${id}.${imagineEXT}`),fileData);
+    const anunt1 = { 
+                id, 
+                title: req.body.title,
+                description: req.body.description,
+                img: `resurse_poze/public/imagini/${id}.${imagineEXT}` 
+                
+            }
+    fs.writeFileSync(path.join(dataDir,`${id}.json`),JSON.stringify(anunt1));        
+    res.redirect('/logat');
+});
+
+
 app.get('/formular_completat',(req,res)=>{
-    const info = fs.readdirSync(dataDir2);
+    /*const info = fs.readdirSync(dataDir2);
     const informatii = info.map( filename =>{
         const inf = fs.readFileSync(path.join(dataDir2, filename));
         return JSON.parse(inf);
-    });
+    });*/
+    fs.readFile("formular_angajare.json",function(err,date){
+        if(err) throw err;
+        var informatii = JSON.parse(date);
+        let n = informatii.length;
+        console.log(n);
+        console.log(informatii[n-1]);
+        res.render('pagini_html/formular_completat',{'name': informatii[n-1].nume, 'prename': informatii[n-1].prenume});
+        })
+    /*    
     let n = informatii.length;
     console.log(n);
     console.log(informatii[n-1]);
     res.render('pagini_html/formular_completat',{'name': informatii[n-1].nume, 'prename': informatii[n-1].prenume});
+    */
 });
 
 app.get('/formular',(req,res)=>{
@@ -80,27 +109,17 @@ app.post('/formular',formidableMiddleware(),(req,res)=>{
                  cv: `formular_angajare/documente/${id}.${cvExtensie}`
    }
 
-    fs.writeFileSync(path.join(dataDir2,`${id}.json`),JSON.stringify(informatii));
+    if (fs.existsSync("formular_angajare.json")){
+        var date= fs.readFileSync("formular_angajare.json");
+        ob=JSON.parse(date);
+    } else {ob=[];}
+
+   // ob.push(req.body);
+    ob.push(informatii);
+    fs.writeFileSync("formular_angajare.json",JSON.stringify(ob));
+
+    //fs.writeFileSync(path.join(dataDir2,`${id}.json`),JSON.stringify(informatii));
     res.redirect('/formular_completat');
-});
-
-
-
-app.post('/anunt_add',formidableMiddleware(),(req,res)=>{
-    const imagine = req.files.img;
-    const id = Date.now();
-    const imagineEXT = imagine.originalFilename.split(".").at(-1);
-    const fileData = fs.readFileSync(imagine.filepath);
-    fs.writeFileSync(path.join(imagineDir,`${id}.${imagineEXT}`),fileData);
-    const anunt1 = { 
-                id, 
-                title: req.body.title,
-                description: req.body.description,
-                img: `resurse_poze/public/imagini/${id}.${imagineEXT}` 
-                
-            }
-    fs.writeFileSync(path.join(dataDir,`${id}.json`),JSON.stringify(anunt1));        
-    res.redirect('/logat');
 });
 
 app.get('/login', function(req,res){
