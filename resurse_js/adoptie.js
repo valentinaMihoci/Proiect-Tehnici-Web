@@ -97,7 +97,7 @@ function init(){
               }
             }
 
-            document.addEventListener('contextmenu', handleClick);
+          //  document.addEventListener('contextmenu', handleClick);
 }
 
 function plimba(ob){

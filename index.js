@@ -5,8 +5,8 @@ const formidableMiddleware = require('./middlewares/formidableMiddleware');
 const app = express();
 const formidable=require('formidable');
 const dataDir = path.join(__dirname,"data");
-const dataDir2 = path.join(__dirname,"date_formular_ang");
-const cvDir = path.join(__dirname,"date_formular_ang/documente");
+const dataDir2 = path.join(__dirname,"formular_angajare/date_formular_ang");
+const cvDir = path.join(__dirname,"formular_angajare/documente");
 const imagineDir = path.join(__dirname, "resurse_poze/public/imagini");
 const session = require('express-session');
 const crypto = require('crypto');
@@ -54,9 +54,10 @@ app.get('/formular_completat',(req,res)=>{
         return JSON.parse(inf);
     });
     let n = informatii.length;
+    console.log(n);
     console.log(informatii[n-1]);
-    res.render('pagini_html/formular_completat',{'name': "Valentina", 'prename':'Mihoci'});
- });
+    res.render('pagini_html/formular_completat',{'name': informatii[n-1].nume, 'prename': informatii[n-1].prenume});
+});
 
 app.get('/formular',(req,res)=>{
     res.render('pagini_html/formular');
@@ -76,11 +77,11 @@ app.post('/formular',formidableMiddleware(),(req,res)=>{
                  email: req.body.email,
                  telefon: req.body.telefon,
                  pref: req.body.preferinta,
-                 cv: `date_formular_ang/documente/${id}.${cvExtensie}`
+                 cv: `formular_angajare/documente/${id}.${cvExtensie}`
    }
-   fs.writeFileSync(path.join(dataDir2,`${id}.json`),JSON.stringify(informatii));
-   console.log(req.body.prenume);
-   res.redirect('/formular_completat');
+
+    fs.writeFileSync(path.join(dataDir2,`${id}.json`),JSON.stringify(informatii));
+    res.redirect('/formular_completat');
 });
 
 
@@ -93,9 +94,8 @@ app.post('/anunt_add',formidableMiddleware(),(req,res)=>{
     fs.writeFileSync(path.join(imagineDir,`${id}.${imagineEXT}`),fileData);
     const anunt1 = { 
                 id, 
-                title:req.body.title,
-                detalii:req.body.detalii, 
-             //   numarTelefon: req.body.numarTelefon,
+                title: req.body.title,
+                description: req.body.description,
                 img: `resurse_poze/public/imagini/${id}.${imagineEXT}` 
                 
             }

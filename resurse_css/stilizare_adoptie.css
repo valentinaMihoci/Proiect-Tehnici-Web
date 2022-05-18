@@ -174,37 +174,33 @@ h1{
     display: flex;
     flex-flow: row wrap;
     width:100%;
-    border: 1px solid black;
     text-align: center;
     justify-content: space-around;
 }
 
-
-.home_anunt{
-    margin-left: 5px;
-    margin-right:5px;
-    background-color: bisque;
-    border-style:double;
-    border-color:rgb(77, 47, 10);
-}
-
-.anunt{
-    flex: 1 0 auto;
+.anunt1{
+    width: 30%;
+    height: 25%;
     margin: 1em;
     text-align: center;
-    background-color:rgb(127, 227, 255);
+    background-color:rgba(242, 132, 6, 0.597);
+    border-style: double;
+    border-width: 5px;
+    border-color:rgb(77, 47, 10);
  
 }
 
-img{
-    width:70%;
-    height:200px;
-    border-color: rgb(239, 12, 12);
+#imagine_anunt{
+    width:50%;
+    height: 50%;
+    border-color: rgb(60, 30, 4);
     border-style: solid;
     border-width: 4px;
 }
 
-.anunt1{
-    list-style-type: none;
+#descriere_anunt{
+    display: inline-block;
+    opacity: 1;
+    color: black;
 }
 

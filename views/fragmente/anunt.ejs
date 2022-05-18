@@ -1,12 +1,5 @@
-<ul class="home_anunt">
-    <li class="anunt1">
-       <article class="anunt2">
-           <figure class="anunt3">
-               <img src="<%= anunt.img %>" />
-               <h4> <%= anunt.title %> </h4>
-           </figure>
-           <p> <%= anunt.detalii %> </p>
-           <!--<p> <%= anunt.numarTelefon %> </p> -->
-       </article>
-    </li>
-</ul>
+<div class="anunt1">
+            <img src="<%= anunt.img %>" id="imagine_anunt"/>
+            <h4 id="titlu_anunt"> <%= anunt.title %> </h4>
+            <p id="descriere_anunt"> <%= anunt.description %> </p>
+</div>
