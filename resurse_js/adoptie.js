@@ -1,6 +1,7 @@
 function init(){
             const images = document.querySelectorAll("img.im");
-            const descriere = document.querySelectorAll("p.ascuns");
+            //const descriere = document.querySelectorAll("p.ascuns");
+            const descriere = document.getElementsByClassName("ascuns");
             const modal = document.querySelector(".modal");
             const modalImg = document.querySelector(".modalImg");
             const modalTxt = document.querySelector(".modalTxt");
@@ -121,7 +122,6 @@ function plimba(ob){
 		ob.src="resurse_poze/imagineSpec_copie.jpg";
 	}
 	ob.style.left=pozitie+"px";   //actualizez proprietatea CSS, ca sa se mute obiectul
-	
 }
 
 function randomColor() {
@@ -145,17 +145,17 @@ function handleClick(event) {
   menu.style.top = event.clientY + "px";
   menu.style.left = event.clientX + "px";
   menu.style.padding = 10 + "px";
-menu.style.color = "black";
+  menu.style.color = "black";
   menu.style.background = randomColor();
-menu.style.borderStyle = "double";
-menu.style.borderColor = "brown";
-menu.style.borderWidth = 3 + "px";
+  menu.style.borderStyle = "double";
+  menu.style.borderColor = "brown";
+  menu.style.borderWidth = 3 + "px";
 
   document.body.append(menu);
 
-setTimeout(()=>{
+  setTimeout(()=>{
       menu.remove();
-}, 3000);	
+  }, 3000);	
 }
 
 window.onload = init;
